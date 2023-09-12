@@ -1,12 +1,12 @@
 import './App.css';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Header from "./components/Header";
-import Footer from "./components/Footer"
-import PopUp from "./components/PopUp";
-import Main from './pages/Main'
-import MoreOurProjects from './pages/MoreOurProjects'
-import PhonePopUp from "./components/PhonePopUp";
+import Header from "./Site/components/Header";
+import Footer from "./Site/components/Footer"
+import PopUp from "./Site/components/PopUp";
+import Main from './Site/pages/Main'
+import MoreOurProjects from './Site/pages/MoreOurProjects'
+import PhonePopUp from "./Site/components/PhonePopUp";
 function App() {
   // const { language, toggleLanguage, theme, toggleTheme } = useGlobalContext();
   // <div className="theme-toggle" onClick={toggleTheme}>
@@ -17,6 +17,7 @@ function App() {
   // </div>
   return (
       <Router>
+        <Routes>
         <Header />
         <PhonePopUp/>
           <Routes>
@@ -25,6 +26,7 @@ function App() {
           </Routes>
         <PopUp/>
           <Footer />
+        </Routes>
         </Router>
   );
 }
